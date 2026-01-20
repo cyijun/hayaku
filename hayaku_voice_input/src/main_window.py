@@ -28,8 +28,9 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
+        self.init_processors()  # 先初始化处理器
         self.init_ui()
-        self.init_processors()
+        self.load_presets()  # 加载预设助手（需要 llm_processor 存在）
         self.init_floating_window()
 
     def init_ui(self):
@@ -140,9 +141,6 @@ class MainWindow(QMainWindow):
         # 状态栏
         self.status_label = QLabel("就绪")
         self.statusBar().addWidget(self.status_label)
-
-        # 加载预设助手
-        self.load_presets()
 
         # 自动复制选项
         self.auto_copy = global_config.ui.get("auto_copy_to_clipboard", False)
