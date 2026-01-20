@@ -1,0 +1,8 @@
+PyQt5>=5.15.0
+pyaudio
+webrtcvad-wheels
+numpy
+pydub
+openai
+requests
+pyyaml
