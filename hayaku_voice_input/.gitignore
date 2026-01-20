@@ -1,9 +1,0 @@
-default_config.yaml
-
-default_config.yaml.bak
-
-__pycache__/
-
-*.pyc
-
-.DS_Store
